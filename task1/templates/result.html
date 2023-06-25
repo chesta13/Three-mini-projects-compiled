@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Candidate Evaluation - Result</title>
+   
+    <style>
+        .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #36381689;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 24px;
+    color: gold;
+}
+
+h2 {
+    font-size: 20px;
+    color: gold;
+}
+
+.resume {
+    font-family: monospace;
+   background-color: #ffffff;
+    padding: 10px;
+    border: 2px solid #ccc;
+    white-space: pre-wrap;
+}
+
+.message {
+    font-size: 18px;
+    color: #4fb7e3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Job Candidate Evaluation - Result</h1>
+        {% if best_candidate_resume %}
+            <h2>Best Candidate Resume:</h2>
+            <pre class="resume">{{ best_candidate_resume }}</pre>
+        {% else %}
+            <p class="message">No suitable candidate found.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
