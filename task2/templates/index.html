@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Translator App</title>
+</head>
+<body>
+    <h1>Translator App</h1>
+    <form method="POST" action="/">
+        <label for="text">Text to Translate:</label>
+        <input type="text" name="text" id="text" required><br><br>
+
+        <label for="source_lang">Source Language:</label>
+        <select name="source_lang" id="source_lang" required>
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <!-- Add more language options as needed -->
+        </select><br><br>
+
+        <label for="target_lang">Target Language:</label>
+        <select name="target_lang" id="target_lang" required>
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <!-- Add more language options as needed -->
+        </select><br><br>
+
+        <input type="submit" value="Translate">
+    </form>
+
+    {% if translated_text %}
+    <h2>Translated Text:</h2>
+    <p>{{ translated_text }}</p>
+    {% endif %}
+</body>
+</html>
